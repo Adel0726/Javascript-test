@@ -7,9 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="box">
-        <p></p>
-
+    <div class="Container">
+        <button id="button" onclick="BlowTheBallon();">Blåsa Ballongen </button>
+            <p id="ballon">🎈</p>
     </div>
+    <h1 id="text" >Blås!</h1>
+
+
+    <script>
+        let size = 16
+        const Ballon = document.getElementById("ballon")
+        const Button = document.getElementById("button")
+        const H1 = document.getElementById("text")
+
+        function BlowTheBallon(){
+             if (size >= 51) { 
+            Ballon.innerText = "💥"
+            H1.innerText = "STOP!!"
+            } else {
+                size += 5 
+                Ballon.style.fontSize = size + "px"
+             }
+            }
+    </script>
 </body>
 </html>
