@@ -8,7 +8,7 @@ body {
 
     grid-template-areas: 
     ". h1 ."
-    ". ballon ."
+    "img ballon ."
     ". . .";
 }
 
@@ -19,9 +19,14 @@ body {
     display: flex;
 }
 
-h1 {
+.text {
     grid-area: h1;
+    margin: 0 0 10px  0;
     align-self: end;
+}
+
+label {
+    font-size: 1.2rem;
 }
 
 button {
@@ -31,3 +36,11 @@ button {
     width: 145px;
     cursor: pointer;
 }
+
+img {
+    grid-area: img;
+    cursor: pointer;
+    justify-self: center;
+    width: 100px;
+}
+

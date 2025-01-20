@@ -9,26 +9,52 @@
 <body>
     <div class="Container">
         <button id="button" onclick="BlowTheBallon();">Blåsa Ballongen </button>
-            <p id="ballon">🎈</p>
+        <p id="ballon">🎈</p>
     </div>
-    <h1 id="text" >Blås!</h1>
-
-
+    <div class="text" >
+        <h1 id="text">Blås!</h1>
+        <input type="checkbox" id="checkbox" onclick="ShowText();">
+        <label for="checkbox">Visa text</label>
+    </div>
+    <img src="off.png" id="lamp" onclick="ChangeLamp();">
+    
+    
     <script>
-        let size = 16
-        const Ballon = document.getElementById("ballon")
-        const Button = document.getElementById("button")
-        const H1 = document.getElementById("text")
+        let size = 16;
+        const Ballon = document.getElementById("ballon");
+        const H1 = document.getElementById("text");
 
-        function BlowTheBallon(){
-             if (size >= 51) { 
-            Ballon.innerText = "💥"
-            H1.innerText = "STOP!!"
+        function BlowTheBallon() {
+            if (size >= 50) { 
+                Ballon.innerText = "💥";
+                H1.innerText = "STOP!!";
             } else {
-                size += 5 
-                Ballon.style.fontSize = size + "px"
-             }
+                size += 5; 
+                Ballon.style.fontSize = size + "px";
             }
+        }
+
+        let lamp_value = 0;
+
+        function ChangeLamp() {
+            const lamp = document.getElementById("lamp");
+            if (lamp_value == 0) {
+                lamp.src = "on.png";
+                lamp_value++;
+            } else {
+                lamp.src = "off.png";
+                lamp_value--;
+            }
+        }
+
+
+        function ShowText() {
+        const checkbox = document.getElementById("checkbox"); 
+        if (checkbox.checked) { 
+        H1.style.display = "none"; } else{
+        H1.style.display = "block";
+            } 
+        }
     </script>
 </body>
 </html>
