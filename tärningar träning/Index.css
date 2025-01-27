@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.Container {
+    margin-top: 200px;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    display: flex;
+}
+.dices-container {
+    display: flex;
+    border-radius: 10px;
+    padding: 16px 15px;
+    border: 3px solid rgb(96, 23, 163);
+    box-shadow: 1px 1px 45px rgb(96, 23, 163);
+}
+
+
+.btn-container {
+    align-self: center;
+}
+
+button {
+    outline: 50px;
+    padding: 5px 10px;
+    margin: 15px 5px;
+    font-size:  1rem;
+    align-self: center;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:active {
+    border-color: rgb(217, 212, 212);
+    color:  rgb(217, 212, 212);
+}
+
+li {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+img {
+    width: 50px;
+}
+
+input {
+    margin-top: 10px;
+}

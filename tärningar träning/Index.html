@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="dices-container">
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+            <li><img src="QuestoionMark.png" alt="" class="dice"><input type="checkbox" name="" class="dice-input"></li>
+        </div>
+        <div class="btn-container">
+            <button onclick="ChangeDicesValue();">Uppdatera</button>
+            <button onclick="Reset();">Reset</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const checkboxes = document.querySelectorAll(".dice-input");
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        }
+        );
+
+        function Reset() {
+            const checkboxes = document.querySelectorAll(".dice-input");
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        }
+
+        function ChangeDicesValue() {
+        let Dices = document.getElementsByClassName("dice");
+        const Input = document.getElementsByClassName("dice-input");
+
+        for(let i = 0; i < Dices.length;i++) {
+            let number = Math.ceil(Math.random() * 6 );
+
+            if (Input[i].checked) {
+                
+            } else {
+                Dices[i].src = "dice" + number + ".png";
+            }
+        }
+        }
+    </script>
+</body>
+</html>
